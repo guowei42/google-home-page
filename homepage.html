@@ -16,22 +16,37 @@
     .button:focus{
         border: 1px solid #3e85f0;
     }
+    #search-bar input {
+        width: 500px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #8b8e91;
+        border-radius: 10px;
+    }
+    #search-bar input:focus{
+        outline: none;
+        border: 1px solid #3e85f0;
+        border-radius: 10px;
+    }
+    #search-icon{
+        filter: invert(69%) hue-rotate(122deg) contrast(89%);
+        width: 20px;
+        height: auto;
+    }
     .all{
-        display: flex;
-        justify-content:center;
-        align-items:center;
-        height: 500px;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%,50%);
     }
 </style>
 <div class = "all">
-    <div id = "search-icon">
-        <img src="outline_search_black_24dp.png" alt="Google search bar magnifying glass">
-    </div>
-    <div id = "search-bar">
-        <form class =  "search-bar">
-            <input type = "text" placeholder="" name = "search">
-        </form>
-    </div>
+    <img id = "search-icon" src="outline_search_black_24dp.png" alt="Google search bar magnifying glass">
+    <img id = "google-logo" src="google-logo.png" alt="Google logo">
+    <form id =  "search-bar">
+        <input type = "text" placeholder="" name = "search">
+    </form>
     <div id = "buttons">
         <button class = "button" type="button">Google Search</button>
         <button class = "button" type="button">I'm Feeling Lucky</button>
