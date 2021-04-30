@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <style>
+    .all{
+        position: absolute;
+        top: 14%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%,50%);
+    }
     .button {
         background-color: #f8f9fa;
         font-family: Arial, sans-serif;
@@ -8,6 +15,10 @@
         border: 1px solid #f8f9fa;
         padding: 10px 15px;
         margin: 11px 5px;
+        text-align: center;
+        position: relative;
+        display:inline-block;
+        left:25%;
     }
     .button:hover{
         border: 1px solid #dadce0f8;
@@ -16,42 +27,56 @@
     .button:focus{
         border: 1px solid #3e85f0;
     }
-    #search-bar input {
-        width: 500px;
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid #8b8e91;
-        border-radius: 10px;
+    .search-bar{
+        background-image: url("outline_search_black_24dp.png");
+        background-position: 12px 12px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-color: #ffffff;
+        margin: 15px;
+        width: 555px;
+        padding: 11px;
+        border: 1px solid #dddfe0;
+        border-radius: 25px;
     }
-    #search-bar input:focus{
+    .search-bar input {
+        transform: translate(6%);
         outline: none;
-        border: 1px solid #3e85f0;
+        border: none;
+        font-size: 17px;
+        font-family:Arial, Helvetica, sans-serif;
+        height: 20px;
+        width: 490px;
+    }
+    #search-bar:focus{
+        outline: none;
+        border: none;
         border-radius: 10px;
     }
-    #search-icon{
-        filter: invert(69%) hue-rotate(122deg) contrast(89%);
-        width: 20px;
-        height: auto;
+
+    #google-logo{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 45%;
+        transform: translate(0px,-12px);
     }
-    .all{
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%,50%);
+    #language{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        text-align: center;
     }
 </style>
 <div class = "all">
-    <img id = "search-icon" src="outline_search_black_24dp.png" alt="Google search bar magnifying glass">
     <img id = "google-logo" src="google-logo.png" alt="Google logo">
-    <form id =  "search-bar">
-        <input type = "text" placeholder="" name = "search">
-    </form>
+    <div class ="search-bar">
+    <input type = "text" placeholder="" name = "search">
+    </div>
     <div id = "buttons">
         <button class = "button" type="button">Google Search</button>
         <button class = "button" type="button">I'm Feeling Lucky</button>
     </div>
     <body>
-        <p>Google offered in:</p>
+        <p id = "language">Google offered in:</p>
     </body>
 </div>
