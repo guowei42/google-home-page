@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <style>
-    .all{
+    .centre{
         position: absolute;
         top: 14%;
         left: 50%;
-        margin-right: -50%;
         transform: translate(-50%,50%);
     }
     .button {
@@ -66,17 +65,66 @@
         font-size: 13px;
         text-align: center;
     }
+
+
+    .corner-buttons{
+        position: absolute;
+        top:12px ;
+        margin-right: 0px;
+        right:18px;
+        transform: translate(0%,0%);
+    }
+    #sign-in{
+        background-color: rgb(45, 114, 218);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        color: white;
+        width: 96px;
+        height: 36px;
+        border-radius: 5px;
+        border:none;
+    }
+    #corner-others{
+        background-color: white;
+        border:none;
+        color: black;
+        padding: 0px;
+        width: 49px;
+    }
+    #corner-others:hover{
+        text-decoration: underline;
+    }
+    #menu{
+        background-image: url("google-9-dots.png");
+        background-repeat: no-repeat;
+        background-position: center,center;
+        background-color: white;
+        background-size: 25px;
+        transform: translate(0px,-5px);
+        height: 40px;
+        border-radius: 50%;
+        border:none;
+        width: 40px;
+    }
+    #menu:hover{
+        background-color: rgb(218, 214, 214);
+    }
 </style>
-<div class = "all">
+<div class = "centre">
     <img id = "google-logo" src="google-logo.png" alt="Google logo">
     <div class ="search-bar">
     <input type = "text" placeholder="" name = "search">
     </div>
-    <div id = "buttons">
-        <button class = "button" type="button">Google Search</button>
-        <button class = "button" type="button">I'm Feeling Lucky</button>
-    </div>
+    <button class = "button" type="button">Google Search</button>
+    <button class = "button" type="button">I'm Feeling Lucky</button>
     <body>
         <p id = "language">Google offered in:</p>
     </body>
 </div>
+<div class = "corner-buttons">
+    <button id = "corner-others" type="button">Gmail</button>
+    <button id = "corner-others" type="button">Images</button>
+    <button id = "menu" type="button"></button>
+    <button id = sign-in type="button">Sign in</button>
+</div>
+
