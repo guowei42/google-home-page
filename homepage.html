@@ -10,6 +10,7 @@
         background-color: #f8f9fa;
         font-family: Arial, sans-serif;
         font-size: 14px;
+        color: #3c4043;
         border-radius:4px;
         border: 1px solid #f8f9fa;
         padding: 10px 15px;
@@ -33,7 +34,7 @@
         background-repeat: no-repeat;
         background-color: #ffffff;
         margin: 15px;
-        width: 555px;
+        min-width: 555px;
         padding: 11px;
         border: 1px solid #dddfe0;
         border-radius: 25px;
@@ -53,6 +54,28 @@
         border-radius: 10px;
     }
 
+    .lang_links{
+        text-align: center;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        padding: 0%;
+    }
+
+    .lang_links li{
+        display: inline-block;
+        padding: 2px;
+        margin: 2px;
+        
+    }
+    a#links{
+        color: #1a0dab;
+        text-decoration: none;
+    }
+
+    a#links:hover{
+        text-decoration: underline;
+    }
+
     #google-logo{
         display: block;
         margin-right: auto;
@@ -65,7 +88,6 @@
         font-size: 13px;
         text-align: center;
     }
-
 
     .corner-buttons{
         position: absolute;
@@ -99,12 +121,14 @@
         background-repeat: no-repeat;
         background-position: center,center;
         background-color: white;
-        background-size: 25px;
-        transform: translate(0px,-5px);
+        background-size: 22px;
+        transform: translate(-3px,-5px);
         height: 40px;
+        width: 40px;
+        margin: auto 10px auto;
         border-radius: 50%;
         border:none;
-        width: 40px;
+        
     }
     #menu:hover{
         background-color: rgb(218, 214, 214);
@@ -112,14 +136,20 @@
 </style>
 <div class = "centre">
     <img id = "google-logo" src="google-logo.png" alt="Google logo">
-    <div class ="search-bar">
-    <input type = "text" placeholder="" name = "search">
-    </div>
+    <form class ="search-bar">
+        <input type = "text" placeholder="" name = "search">
+    </form>
     <button class = "button" type="button">Google Search</button>
     <button class = "button" type="button">I'm Feeling Lucky</button>
     <body>
-        <p id = "language">Google offered in:</p>
+        <ul class="lang_links">
+            <li>Google offered in:</li>
+            <li><a id="links" href="chinese">中文(简体)</a></li>
+            <li><a id="links" href="malay">Bahasa Melayu</a></li>
+            <li><a id="links" href="indian">தமிழ்</a></li>
+        </ul>
     </body>
+   
 </div>
 <div class = "corner-buttons">
     <button id = "corner-others" type="button">Gmail</button>
