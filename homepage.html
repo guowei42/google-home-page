@@ -1,93 +1,5 @@
 <!DOCTYPE html>
 <style>
-    .centre{
-        position: absolute;
-        top: 14%;
-        left: 50%;
-        transform: translate(-50%,50%);
-    }
-    .button {
-        background-color: #f8f9fa;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        color: #3c4043;
-        border-radius:4px;
-        border: 1px solid #f8f9fa;
-        padding: 10px 15px;
-        margin: 11px 5px;
-        text-align: center;
-        position: relative;
-        display:inline-block;
-        left:25%;
-    }
-    .button:hover{
-        border: 1px solid #dadce0f8;
-        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.10);
-    }
-    .button:focus{
-        border: 1px solid #3e85f0;
-    }
-    .search-bar{
-        background-image: url("outline_search_black_24dp.png");
-        background-position: 12px 12px;
-        background-size: 20px;
-        background-repeat: no-repeat;
-        background-color: #ffffff;
-        margin: 15px;
-        min-width: 555px;
-        padding: 11px;
-        border: 1px solid #dddfe0;
-        border-radius: 25px;
-    }
-    .search-bar input {
-        transform: translate(6%);
-        outline: none;
-        border: none;
-        font-size: 17px;
-        font-family:Arial, Helvetica, sans-serif;
-        height: 20px;
-        width: 490px;
-    }
-    #search-bar:focus{
-        outline: none;
-        border: none;
-        border-radius: 10px;
-    }
-
-    .lang_links{
-        text-align: center;
-        font-family:Arial, Helvetica, sans-serif;
-        font-size: 13px;
-        padding: 0%;
-    }
-
-    .lang_links li{
-        display: inline-block;
-        padding: 2px;
-        margin: 2px;
-        
-    }
-    a#links{
-        color: #1a0dab;
-        text-decoration: none;
-    }
-
-    a#links:hover{
-        text-decoration: underline;
-    }
-
-    #google-logo{
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        width: 45%;
-        transform: translate(0px,-12px);
-    }
-    #language{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 13px;
-        text-align: center;
-    }
 
     .corner-buttons{
         position: absolute;
@@ -133,8 +45,107 @@
     #menu:hover{
         background-color: rgb(218, 214, 214);
     }
+
+
+    .center{
+        position: absolute;
+        top:14%;
+        left:50%;
+        transform: translate(-50%,50%);
+        width:555px;
+        flex-shrink:1;
+    }
+
+
+    #google-logo{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 49.3%;
+        transform: translate(0px,-12px);
+    }
+   
+    
+    .search-bar{
+        position: relative;
+        background-image: url("outline_search_black_24dp.png");
+        background-position: 12px 12px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-color: #ffffff;
+        margin: 15px;
+        width: auto;
+        padding: 11px;
+        border: 1px solid #dddfe0;
+        border-radius: 25px;
+        display:block;
+        flex-shrink: 1;
+    }
+    .search-bar input {
+        transform: translate(6%);
+        /*outline: none;
+        border: none;*/
+        font-size: 17px;
+        font-family:Arial, Helvetica, sans-serif;
+        height: 20px;
+        width: 90%;
+    }
+    .search-bar:focus{
+        outline: none;
+        border: none;
+        border-radius: 10px;
+    }
+    #language{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        text-align: center;
+    }
+
+
+    .button {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #3c4043;
+        border-radius:4px;
+        border: 1px solid #f8f9fa;
+        padding: 10px 15px;
+        margin: 11px 5px;
+        position: relative;
+        left:25%;
+    }
+    .button:hover{
+        border: 1px solid #dadce0f8;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.10);
+    }
+    .button:focus{
+        border: 1px solid #3e85f0;
+    }
+
+    
+    .lang_links{
+        text-align: center;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        padding: 0%;
+    }
+    .lang_links li{
+        display: inline-block;
+        padding: 2px;
+        margin: 2px;
+        
+    }
+    a#links{
+        color: #1a0dab;
+        text-decoration: none;
+    }
+
+    a#links:hover{
+        text-decoration: underline;
+    }
 </style>
-<div class = "centre">
+
+<div class = "center">
     <img id = "google-logo" src="google-logo.png" alt="Google logo">
     <form class ="search-bar">
         <input type = "text" placeholder="" name = "search">
@@ -149,8 +160,8 @@
             <li><a id="links" href="indian">தமிழ்</a></li>
         </ul>
     </body>
-   
 </div>
+
 <div class = "corner-buttons">
     <button id = "corner-others" type="button">Gmail</button>
     <button id = "corner-others" type="button">Images</button>
