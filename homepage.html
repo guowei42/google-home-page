@@ -4,6 +4,7 @@
         display:flex;
         justify-content: right;
         align-items: center;
+        transform: translate(-20px,10px);
     }
     #sign-in{
         background-color: rgb(45, 114, 218);
@@ -41,51 +42,55 @@
         background-color: rgb(218, 214, 214);
     }
 
-    
+    body{
+        margin:0px;
+        height:100%;
+    }
     .center{
-        position: absolute;
         display: flex;
         flex-direction: column;
-        height: 100%;
-        left:50%;
-        top:50%;
-        transform: translate(-50%,-50%);
+        transform: translateY(calc(25vh));
         justify-content: center;
-        width:555px;
     }
 
 
     #google-logo{
         margin-right: auto;
         margin-left: auto;
-        width: 49.3%;
+        width: 294px;
         transform: translate(0px,-12px);
     }
    
-    
+    .shrinking-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
     .search-bar{
         position: relative;
         background-image: url("outline_search_black_24dp.png");
-        background-position: 10px 14px;
+        background-position: 12px 13px;
         background-size: 20px;
         background-repeat: no-repeat;
         background-color: #ffffff;
         margin: 15px 0px 15px 0px;
-        width: 100%;
         padding: 11px 0px 11px 0px;
         border: 1px solid #dddfe0;
         border-radius: 25px;
-        display: inline-flex;
-        flex-shrink: 1;
+        min-width:100px;
+        max-width:555px;
+        flex-grow: 1;
     }
+
     .search-bar input {
-        transform: translate(6%);
-        /*outline: none;
-        border: none;*/
+        transform: translate(7%);
+        align-items: center;
+        outline: none;
+        border: none;
         font-size: 17px;
         font-family:Arial, Helvetica, sans-serif;
+        width:87%;
         height: 20px;
-        width: 90%;
     }
     .search-bar:focus{
         outline: none;
@@ -146,31 +151,93 @@
     a#links:hover{
         text-decoration: underline;
     }
+    footer{
+        position:fixed;
+        bottom:0;
+        width:100%;
+    }
+    .country{
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: rgb(242,242,242);
+        margin:0;
+        border-bottom:1px solid #dadce0;
+        padding: 15px 30px;
+        font-size: 15px;
+        color:rgba(0,0,0,.54);
+    }
+    .base{
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: rgb(242,242,242);
+        display: flex;
+        justify-content: center;
+        padding: 15px 30px;
+        font-size: 14px;
+        color:rgba(0,0,0,.54);
+    }
+    .base .left{
+        transform: translateX(-10%);
+    }
+    .base .left li{
+        padding: 0px 15px;
+        display: inline-flex;
+    }
+    .base .right{
+        transform: translateX(10%);
+    }
+    .base .right li{
+        padding: 0px 15px;
+        display: inline-flex;
+    }
+    
 </style>
 
-<div class = "center">
-    <img id = "google-logo" src="google-logo.png" alt="Google logo">
-    <form class ="search-bar">
-        <input type = "text" placeholder="" name = "search">
-    </form>
-    <ul class="search-buttons">
-        <button class = "button" type="button">Google Search</button>
-        <button class = "button" type="button">I'm Feeling Lucky</button>
-    </ul>
-    <body>
+<header>
+    <div class = "corner-buttons">
+        <button id = "corner-others" type="button">Gmail</button>
+        <button id = "corner-others" type="button">Images</button>
+        <button id = "menu" type="button"></button>
+        <button id = sign-in type="button">Sign in</button>
+    </div>
+</header>
+
+<body>
+    <div class = "center">
+        <img id = "google-logo" src="google-logo.png" alt="Google logo">
+        <div class = "shrinking-wrapper">
+            <form class ="search-bar">
+                <input type = "text" placeholder="" name = "search">
+            </form>
+        </div>
+        <ul class="search-buttons">
+            <button class = "button" type="button">Google Search</button>
+            <button class = "button" type="button">I'm Feeling Lucky</button>
+        </ul>
         <ul class="lang_links">
             <li>Google offered in:</li>
             <li><a id="links" href="chinese">中文(简体)</a></li>
             <li><a id="links" href="malay">Bahasa Melayu</a></li>
             <li><a id="links" href="indian">தமிழ்</a></li>
         </ul>
-    </body>
-</div>
+    </div>
+</body>
 
-<div class = "corner-buttons">
-    <button id = "corner-others" type="button">Gmail</button>
-    <button id = "corner-others" type="button">Images</button>
-    <button id = "menu" type="button"></button>
-    <button id = sign-in type="button">Sign in</button>
-</div>
+<footer>
+    <div class = "country">
+        Singapore
+    </div>
+    <div class = "base">
+        <div class = "left">
+            <li>About</li>
+            <li>Advertising</li>
+            <li>Business</li>
+            <li>How Search Works</li>
+        </div>
+        <div class = "right">
+            <li>Privacy</li>
+            <li>Terms</li>
+            <li>Settings</li>
+        </div>
+        
+    </div>
+</footer>
 
