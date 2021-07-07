@@ -57,7 +57,7 @@
     #google-logo{
         margin-right: auto;
         margin-left: auto;
-        width: 294px;
+        width: 270px;
         transform: translate(0px,-12px);
     }
    
@@ -83,7 +83,7 @@
     }
 
     .search-bar input {
-        transform: translate(7%);
+        transform: translate(7%,1px);
         align-items: center;
         outline: none;
         border: none;
@@ -169,26 +169,28 @@
         font-family:Arial, Helvetica, sans-serif;
         background-color: rgb(242,242,242);
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
         padding: 15px 30px;
         font-size: 14px;
         color:rgba(0,0,0,.54);
-    }
-    .base .left{
-        transform: translateX(-10%);
     }
     .base .left li{
         padding: 0px 15px;
         display: inline-flex;
     }
-    .base .right{
-        transform: translateX(10%);
+    .base .left li a{
+        color:rgba(0,0,0,.54);
+        text-decoration: none;
     }
     .base .right li{
         padding: 0px 15px;
         display: inline-flex;
     }
-    
+    .base .right li a{
+        color:rgba(0,0,0,.54);
+        text-decoration: none;
+    }
 </style>
 
 <header>
@@ -214,9 +216,9 @@
         </ul>
         <ul class="lang_links">
             <li>Google offered in:</li>
-            <li><a id="links" href="chinese">中文(简体)</a></li>
-            <li><a id="links" href="malay">Bahasa Melayu</a></li>
-            <li><a id="links" href="indian">தமிழ்</a></li>
+            <li><a id="links" href="#">中文(简体)</a></li>
+            <li><a id="links" href="#">Bahasa Melayu</a></li>
+            <li><a id="links" href="#">தமிழ்</a></li>
         </ul>
     </div>
 </body>
@@ -227,15 +229,15 @@
     </div>
     <div class = "base">
         <div class = "left">
-            <li>About</li>
-            <li>Advertising</li>
-            <li>Business</li>
-            <li>How Search Works</li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Advertising</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">How Search Works</a></li>
         </div>
         <div class = "right">
-            <li>Privacy</li>
-            <li>Terms</li>
-            <li>Settings</li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Settings</a></li>
         </div>
         
     </div>
